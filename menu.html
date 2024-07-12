@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, main, section, article, aside, footer {
+            padding: 20px;
+            margin: 10px;
+        }
+        header {
+            background-color: #000;
+            color: white;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+        }
+        nav a {
+			font-weight: bold !important;
+			color: white !important;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+		nav a.active {
+			font-weight: bold !important;
+            font-size: 18px !important;
+			color: #FBA325 !important;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        main {
+			background-color: white;
+			background-position-y: bottom;
+			background-position-x: 105%;
+			background-image: url(qa.jpg);
+			background-size:40%;
+			background-repeat: no-repeat;
+			box-shadow: 0px 0px 10px #aaa;
+			padding-bottom: 180px;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+        }
+		table {
+            width: 100%; /* Makes the table take up the full width of its container */
+            border-collapse: collapse; /* Ensures borders between cells are collapsed */
+        }
+        th, td {
+            text-align: left; /* Aligns text to the left */
+            padding: 8px; /* Adds padding to the cells */
+
+        }
+        /* Ancho del 20% para las columnas 0, 3 y 6 */
+        th:nth-child(1), td:nth-child(1) {
+            width: 80%;
+			font-weight: bold;
+        }
+        /* Ancho del 5% para las columnas 1, 2, 4, 5 y 7 */
+        th:nth-child(2), td:nth-child(2), 
+        th:nth-child(3), td:nth-child(3) {
+            width: 10%;
+			text-align: right;
+        }
+		th {
+			font-weight: bold !important;
+		}	/*	
+		h2 {
+			margin: 0px;
+			height: 100px;
+			padding: 160px 170px 30px 170px;
+			text-align: center;
+			vertical-align: middle;
+			background-size: 50%;
+			background-repeat: no-repeat;
+			background-color: #F9F4F0;
+			background-position: center;
+			background-image: url(ti.jpg);
+		}	*/		
+		.p {
+			background-size:40%;
+			height: 100px;
+			width: 300px;
+			box-shadow: 0px 0px 10px #aaa;
+		}	
+
+	/* Contenedor flexible */
+	.navbar {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		background-color: #333;
+	}
+	.navbar a {
+		color: white;
+		padding: 14px 20px;
+		text-decoration: none;
+		text-align: center;
+	}
+	.navbar a:hover {
+	  background-color: #ddd;
+	}
+
+	.navbar a.active {
+	  color: blue; /* Cambia este color según tus preferencias */
+	}
+
+	/* Flexbox para móviles */
+	@media (max-width: 600px) {
+		.navbar {
+			flex-direction: column;
+		}
+	}
+	.secondDivContenidorFotor span, .secondDivContenidorFotor a{            
+		display: inline-block;
+		color: rgb(255, 255, 255);
+		font-family: Verdana;
+		font-weight: bold !important;
+	}	
+		
+
+.container {
+	display: none;
+}
+		
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>GIRASOL</h1>
+</header>
+
+<nav class="navbar">
+    <a href="#bocaF">Bocadillos Fríos</a>
+    <a href="#bocaC">Bocadillos Calientes</a>
+    <a href="#tapasF">Tapas Frías</a>
+    <a href="#tapasC">Tapas Calientes</a>
+    <a href="#platos">Platos</a>
+    <a href="#combi">Platos combinados</a>
+</nav>
+
+<main>
+    <div id="bocaF" class="container container1">
+        <h2>Bocadillos  Fríos</h2>
+			<table>
+				<tr>
+					<th></th>
+					<th>Medio</th>
+					<th>Mini</th>
+				</tr>
+				<tr>
+					<td>Anchoas</td><td>€</td><td>€</td>
+				</tr>
+				<tr>
+					<td>Queso</td><td>€</td><td>€</td>
+				</tr>
+				<tr>
+					<td>Fuet</td><td>€</td><td>€</td>
+				</tr>
+				<tr>
+					<td>Longaniza</td><td>€</td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Jamón dulce</td><td>€</td><td>€</td>
+				</tr>
+				<tr>
+					<td>Jamón serrano</td><td>€</td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Atún</td><td>€</td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Vegetal atún</td><td>€</td><td>€</td>
+				</tr>
+				<tr>					
+					<td style="font-size:10px; padding-top: 0px; padding-left: 10px !important;">  atún, huevo duro, tomate, lechuga, mayonesa</td>
+				</tr>
+				<tr>					
+					<td>Chorizo</td><td>€</td><td>€</td>
+				</tr>
+			</table>
+			</p>Suplemento: queso, rajolas de tomate, lechuga (+1€)</p>
+			
+    </div>
+    <div id="bocaC" class="container container2">
+        <h2>Bocadillos Calientes</h2>
+			<table>
+				<tr>
+					<th></th>
+					<th>Medio</th>
+					<th>Mini</th>
+				</tr>
+				<tr>
+					<td>Bistec</td><td>€</td><td>€</td>
+				</tr>				
+				<tr>
+					<td>Bacon</td><td>€</td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Lomo</td><td>€</td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Bacon, Lomo, Queso</td><td>€</td><td>€</td>
+				</tr>
+				<tr>
+					<td>Butifarra</td><td>€</td><td>€</td>
+				</tr>
+				<tr>
+					<td>Pechuga de pollo</td><td>€</td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Tortilla francesa</td><td>€</td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Tortilla francesa con Chorizo</td><td>€</td><td>€</td>
+				</tr>				
+				<tr>					
+					<td>Tortilla francesa con atún</td><td>€</td><td>€</td>
+				</tr>				
+				<tr>					
+					<td>Vegetal pollo</td><td>€</td><td>€</td>
+				</tr>
+				<tr>					
+					<td style="font-size:10px; padding-top: 0px; padding-left: 10px !important;">  pechuga de pollo, queso, tomate, lechuga, mayonesa</td>
+				</tr>
+			</table>
+        <h2>Otros</h2>
+			<table>
+				<tr>
+					<td>Bikini</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Frankfurt</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Hamburguesa</td><td></td><td>€</td>
+				</tr>
+			</table>
+			</p>Suplemento: queso, pimiento verde, cebolla, huevo (+1€)</p>
+
+	</div>	
+    <div id="tapasF" class="container container2">
+        <h2>Tapas Frías</h2>
+			<table>
+				<tr>					
+					<td>Olivas rellenas</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Queso</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Longaniza</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Fuet</td><td></td><td>€</td>
+				</tr>				
+				<tr>					
+					<td>Jamón serrano</td><td></td><td>€</td>
+				</tr>				
+				<tr>					
+					<td>Chorizo</td><td></td><td>€</td>
+				</tr>				
+				<tr>					
+					<td>Longaniza</td><td></td><td>€</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>				
+				<tr>					
+					<td>Pan con tomate</td><td></td><td>€</td>
+				</tr>
+			</table>
+	</div>
+    <div id="tapasC" class="container container2">
+        <h2>Tapas Calientes</h2>
+
+			<table>
+				<tr>
+					<td>Patatas bravas</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Patatas fritas</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Pimientos de padrón</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Calamares a la romana</td><td></td><td>€</td>
+				</tr>
+				<tr>
+					<td>Croquetas pollo</td><td></td><td>€</td>
+				</tr>
+				<tr>
+					<td>Croquetas jamón</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Alitas de pollo</td><td></td><td>€</td>	
+			</table>
+	</div>	
+	    <div id="platos" class="container container2">
+        <h2>Platos</h2>
+			<table>
+				<tr>
+					<td>Ensalada verde</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Ensalada verde con atún</td><td></td><td>€</td>
+				</tr>
+				<tr>
+					<td>Empanadillas</td><td></td><td>€</td>				
+				</tr>					
+				<tr>									
+					<td>Arroz fritos</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Arroz fritos con gamba</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Arroz fritos con pollo</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Tallarines fritos</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Tallarines fritos con gamba</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Tallarines fritos con pollo</td><td></td><td>€</td>
+				</tr>
+			</table>
+	</div>	
+	    <div id="combi" class="container container2">
+        <h2>Platos Combinados</h2>
+			<table>
+				<tr>
+					<td>Tortilla francesa i amanida</td><td></td><td>€</td>
+				</tr>
+				<tr>
+					<td>Bacon, huevo, amanida i patatas</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Lomo, amanida i patatas</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Botifarra con mongetas o patatas</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Bistec, amanida i patatas</td><td></td><td>€</td>
+				</tr>
+				<tr>
+					<td>Pechuga de pollo, amanida i patatas</td><td></td><td>€</td>
+				</tr>
+				<tr>
+					<td>Churrasco con patatas</td><td></td><td>€</td>
+				</tr>
+				<tr>					
+					<td>Calamares a la plancha con amanida o patatas</td><td></td><td>€</td>
+				</tr>
+
+				<tr>					
+					<td>Salmón a la plancha con amanida o patatas</td><td></td><td>€</td>
+				</tr>
+
+				<tr>					
+					<td>Sepia a la plancha con amanida o patatas</td><td></td><td>€</td>
+				</tr>
+
+				<tr>					
+					<td>Gambas a la plancha</td><td></td><td>€</td>
+				</tr>
+
+				<tr>					
+					<td>Cordero a la plancha con amanida o patatas</td><td></td><td>€</td>
+				</tr>
+			</table>
+			</p>Suplemento: huevo frito, patatas fritas(€)</p>
+	</div>	
+</main>
+
+
+<footer class="divContenidorFotor">
+    <p>
+		<span style="font-size: 13px !important; font-weight: bold; font-family: Verdana; color: white !important;"> <a href="https://maps.app.goo.gl/Dtrc4aSRmrpUEHPp8" target="_blank">Carretera de Roda 1, 08500 Vic </a> – XYOU™ </span>     
+		<a href="https://maps.app.goo.gl/Dtrc4aSRmrpUEHPp8" target="_blank"><img src="ubi.jpg" style="border-radius: 7px; width: 25px !important;"></i></a>
+	</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Obtener todos los enlaces de navegación
+        const navLinks = document.querySelectorAll('.navbar a');
+
+		
+        // Iterar sobre cada enlace y agregar un listener de clic
+        navLinks.forEach(function(navLink) {
+            navLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+
+                // Obtener el ID del objetivo desde el atributo href
+                const targetId = navLink.getAttribute('href').substring(1);
+
+                // Ocultar todos los contenedores de secciones
+                const containers = document.querySelectorAll('.container');
+                containers.forEach(function(container) {
+                    container.style.display = 'none';
+                });
+
+                // Mostrar el contenedor correspondiente al enlace clicado
+                const targetContainer = document.getElementById(targetId);
+                if (targetContainer) {
+                    targetContainer.style.display = 'block';
+					for (i = 0; i < navLinks.length; i++) {
+						navLinks[i].classList.remove("active");
+					}
+					event.currentTarget.classList.add("active");
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
